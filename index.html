@@ -8,7 +8,27 @@
   <title>Portfolio Swapnil Pandit</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <script>
+        function ageCalculator() {
+            var userinput = 1998 +1;
+            var dob = new Date(userinput);
+            //calculate month difference from current date in time
+            var month_diff = Date.now() - dob.getTime();
+            
+            //convert the calculated difference in date format
+            var age_dt = new Date(month_diff); 
+            
+            //extract year from date    
+            var year = age_dt.getUTCFullYear();
+            
+            //now calculate the age of the user
+            var age = Math.abs(userinput - year);
+            
+            //display the calculated age
+            return document.getElementById("result").innerHTML =  
+                     "Age is: " + age + " years. ";
+        }
+        </script>
   <!-- Favicons -->
   <link href="assets/img/Swapnil.jpeg" rel="icon">
   <link href="assets/img/Swapnil.jpeg" rel="apple-touch-icon">
@@ -30,7 +50,7 @@
 
 </head>
 
-<body>
+<body onload="ageCalculator()"> 
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -94,7 +114,7 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>2 June 1998</span></li>  
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 7758 013663</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Sangli, Pune</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span> <h5 id="result"><h5></span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
