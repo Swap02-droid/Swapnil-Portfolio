@@ -8,26 +8,17 @@
   <title>Portfolio Swapnil Pandit</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <script>
-        function ageCalculator() {
-            var userinput = 1998 +1;
-            var dob = new Date(userinput);
-            //calculate month difference from current date in time
-            var month_diff = Date.now() - dob.getTime();
-            
-            //convert the calculated difference in date format
-            var age_dt = new Date(month_diff); 
-            
-            //extract year from date    
-            var year = age_dt.getUTCFullYear();
-            
-            //now calculate the age of the user
-            var age = Math.abs(userinput - year);
-            
-            //display the calculated age
-            return document.getElementById("result").innerHTML =age;
-        }
-        </script>
+ <script>
+    function ageCalculator() {
+        var birthYear = 1999; // Update birth year here
+        var dob = new Date(birthYear, 0); // Create Date object with birth year and January (month index 0)
+        var ageDate = new Date(Date.now() - dob.getTime()); // Calculate difference in milliseconds
+        var age = ageDate.getUTCFullYear() - 1970; // Get the year from the difference
+        
+        // Display the calculated age
+        document.getElementById("result").innerHTML = age;
+    }
+</script>
   <!-- Favicons -->
   <link href="assets/img/Swapnil.jpeg" rel="icon">
   <link href="assets/img/Swapnil.jpeg" rel="apple-touch-icon">
@@ -85,7 +76,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Swapnil Pandit</h1>
-      <p>I'm <span class="typed" data-typed-items="Junior Software Engineer(@excellarate), Data scientist, Web Developer(Intern), Freelancer, Business and Data Analyst"></span></p>
+      <p>I'm <span class="typed" data-typed-items="Software Engineer, Data scientist, Web Developer(Intern), Freelancer, Business and Data Analyst"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -97,8 +88,7 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Currently working as Junior Software Engineer(ML Engineer) at <a href="https://www.excellarate.com/">excellarate </a>. I had done my internship from Vision Software Development, Where I developed web applications in Healthcare and 
-            Education domain. Very passinate about Data Science, Business and Data Analyst technologies. these technologies inspire me alot.</p>
+          <p>Currently working as a Software Engineer at <a href="https://www.encora.com/">Encora Inc. </a>, where I have gained valuable experience in developing APIs using Python frameworks such as Django and FastAPI. My internship experience at Vision Software Development involved the development of web applications in the Healthcare and Education domains. Passionate about Data Science, Business, and Data Analyst technologies, I draw inspiration from these fields. Proficient in Python with expertise in Django and FastAPI, I also possess practical knowledge of machine learning projects. Skilled in using technologies like Docker and Azure for containerization and cloud deployment, I am adept at learning and applying new technologies effectively. I am actively seeking opportunities to contribute my expertise in software development, machine learning, conversational AI, and ethical hacking in a challenging and dynamic environment.</p>
         </div>
 
         <div class="row">
@@ -106,7 +96,7 @@
             <img src="assets/img/Swapnil.jpeg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Developer, Data scientist &amp; Data Analyst.</h3>
+            <h3>Software Engineer, Data scientist &amp; Data Analyst.</h3>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
